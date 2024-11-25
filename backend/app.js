@@ -38,10 +38,10 @@ const PORT = 5000;
 
 
 // app.use(cors({
-//     origin: [], // Add all allowed origins
-//     methods: ["GET", "DELETE", "POST", "PUT"],
-//     credentials: true,
-// }));
+    origin: ["https://imgupload-frt.vercel.app"], // Add all allowed origins
+    methods: ["GET", "DELETE", "POST", "PUT"],
+    credentials: true,
+}));
 
 app.use(express.json());
 app.use('/images', express.static(path.join(__dirname, 'images')));
