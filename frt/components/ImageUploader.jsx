@@ -16,7 +16,8 @@ const ImageUploader = () => {
         formData.append('image', image);
 
         try {
-            const response = await axios.post('https://imgupload-api.vercel.app/api/images/upload', formData);
+            const response = await axios.post('https://imgupload-api.vercel.app/images/upload', formData);
+            // const response = await axios.post('https://imgupload-api.vercel.app/api/images/upload', formData);
             alert('Image uploaded successfully!');
             console.log(response.data);
         } catch (err) {
