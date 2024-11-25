@@ -37,7 +37,7 @@ const PORT = 5000;
 // app.use(cors());
 
 
-// app.use(cors({
+app.use(cors({
     origin: ["https://imgupload-frt.vercel.app"], // Add all allowed origins
     methods: ["GET", "DELETE", "POST", "PUT"],
     credentials: true,
