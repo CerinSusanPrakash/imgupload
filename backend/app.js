@@ -44,6 +44,12 @@ app.use(cors({
 }));
 
 app.use(express.json());
+
+// Default Route
+app.get("/", (req, res) => {
+    res.json({ message: "Backend is working" });
+});
+
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // Database Connection
