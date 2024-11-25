@@ -34,7 +34,12 @@ const app = express();
 const PORT = 5000;
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+    origin: [], // Add all allowed origins
+    methods: ["GET", "DELETE", "POST", "PUT"],
+    credentials: true,
+}));
 app.use(express.json());
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
