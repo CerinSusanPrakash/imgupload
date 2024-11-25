@@ -23,7 +23,7 @@ const ImageGallery = () => {
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
                 {images.map((image) => (
                     <div key={image._id}>
-                        <img src={`http://localhost:5000/${image.imagePath}`} alt={image.imageName} style={{ width: '200px' }} />
+                        <img src={`https://imgupload-api.vercel.app/${image.imagePath}`} alt={image.imageName} style={{ width: '200px' }} />
                     </div>
                 ))}
             </div>
