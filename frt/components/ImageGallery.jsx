@@ -7,7 +7,7 @@ const ImageGallery = () => {
     useEffect(() => {
         const fetchImages = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/images');
+                const response = await axios.get('https://imgupload-api.vercel.app/api/images');
                 setImages(response.data);
             } catch (err) {
                 console.error(err);
